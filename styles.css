@@ -1,0 +1,127 @@
+.hide-all img,
+.Hide {
+    display: none;
+}
+
+.show-all img,
+.Show{
+    display: inline !important;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#test {
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+}
+
+button {
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 5px;
+    background-color: rgb(232, 230, 225);
+    margin: 3.5px;
+    border: none;
+    width: 107px;
+    border: 3px solid rgb(232, 230, 225);
+}
+
+button:hover {
+   background-color: rgb(222, 220, 215);
+}
+
+#sets {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    margin-left: 15px;
+}
+#types {
+    display: flex;
+    flex-direction: column;
+    width: 115px;
+    position: sticky;
+}
+
+#categories {
+    display: flex;
+    flex-direction: column;
+    width: 115px;
+
+}
+
+#filters {
+    display: flex;
+    flex-direction: row;
+    width: 130px;
+    position: sticky;
+    top: 10px
+}
+
+.set {
+    width: 110px;
+}
+
+#test{
+    display: flex;
+    flex-direction: row;
+}
+
+#cards {
+    width: 820px;
+    margin-left: 10px;
+}
+
+.special {
+    text-align: left !important;
+    margin: 0%;
+    margin-left: 5px;
+}
+
+img {
+    height: 264px;
+    width: 164px;
+    border: 3px solid black;
+    border-radius: 5px;
+} 
+
+.selected {
+    border: 3px solid #5cc0e4;
+    background-color: rgb(232, 230, 225);
+}
+
+/* overflow-y:auto; */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

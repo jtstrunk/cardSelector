@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Card Selector</title>
+</head>
+<body>
+    <head>
+        <p>Dominion Card Picker</p>
+    </head>
+    <div id="container">
+        <!-- <div id="sets">
+
+            <button class="set">Dominion SE</button>
+            <button class="set">Seaside SE</button>
+            <button class="set">Intrigue SE</button>
+            <button class="set">Plunder</button>
+            <button class="set">Prosperity</button>
+            <button class="set">Allies</button>
+        </div> -->
+        <div id="test">
+            <div id="filters">
+                <div>
+                    <div id="types">
+                        <p class="special">Type</p>
+                        <button class="type sort deselected" id="action">Action</button>
+                        <button class="type sort deselected" id="victory">Victory</button>
+                        <button class="type sort deselected" id="treasure">Treasure</button>
+                        <button class="type sort deselected" id="attack">Attack</button>
+                        <button class="type sort deselected" id="reaction">Reaction</button>
+                        <button class="type sort deselected" id="duration">Duration</button>
+                    </div>
+                    <div id="categories">
+                        <p class="special">Categories</p>
+                        <button class="categories sort deselected" id="village">Village</button>
+                        <button class="categories sort deselected" id="cantrip">Cantrip</button>
+                        <button class="categories sort deselected" id="gainer">Gainer</button>
+                        <button class="categories sort deselected" id="trasher">Trasher</button>
+                        <button class="categories sort deselected" id="sifter">Sifter</button>
+                        <button class="categories sort deselected" id="defense">Defense</button>
+                        <button class="categories sort deselected" id="terminalDraw">Terminal Draw</button>
+                        <button class="categories sort deselected" id="terminalSilver">Terminal Silver</button>
+                    </div>
+                </div>
+
+        
+        
+            </div>
+            <div id="cards" class="show-all">
+                <img src="images/base/Cellar.jpg" class="" id="Cellar">
+                <img src="images/base/Chapel.jpg" class="" id="Chapel">
+                <img src="images/base/Moat.jpg" class="" id="Moat">
+                <img src="images/base/Harbinger.jpg" class="" id="Harbinger">
+                <img src="images/base/Merchant.jpg" class="" id="Merchant">
+                <img src="images/base/Vassal.jpg" class="" id="Vassal">
+                <img src="images/base/Village.jpg" class="" id="Village">
+                <img src="images/base/Workshop.jpg" class="" id="Workshop">
+                <img src="images/base/Bureaucrat.jpg" class="" id="Bureaucrat">
+                <img src="images/base/Gardens.jpg" class="" id="Gardens">
+                
+                <img src="images/base/Militia.jpg" class="" id="Militia">
+                <img src="images/base/Moneylender.jpg" class="" id="Moneylender">
+                <img src="images/base/Poacher.jpg" class="" id="Poacher">
+                <img src="images/base/Remodel.jpg" class="" id="Remodel">
+                <img src="images/base/Smithy.jpg" class="" id="Smithy">
+                <img src="images/base/Throne_Room.jpg" class="" id="Throne Room">
+                <img src="images/base/Bandit.jpg" class="" id="Bandit">
+                <img src="images/base/Council_Room.jpg" class="" id="Council Room">
+                <img src="images/base/Festival.jpg" class="" id="Festival">
+                <img src="images/base/Laboratory.jpg" class="" id="Laboratory">
+                
+                <img src="images/base/Library.jpg" class="" id="Library">
+                <img src="images/base/Market.jpg" class="" id="Market">
+                <img src="images/base/Mine.jpg" class="" id="Mine">
+                <img src="images/base/Sentry.jpg" class="" id="Sentry">
+                <img src="images/base/Witch.jpg" class="" id="Witch">
+                <img src="images/base/Artisan.jpg" class="" id="Artisan">
+
+                <!--Seaside Second Edition   -->
+                <img src="images/SeasideSE/200px-Haven.jpg" class="" id="Haven">
+                <img src="images/SeasideSE/200px-Lighthouse.jpg" class="" id="Lighthouse">
+                <img src="images/SeasideSE/200px-Native_Village.jpg" class="" id="Native Village">
+                <img src="images/SeasideSE/200px-Astrolabe.jpg" class="" id="Astrolabe">
+                <img src="images/SeasideSE/200px-Fishing_Village.jpg" class="" id="Fishing Village">
+                <img src="images/SeasideSE/200px-Lookout.jpg" class="" id="Lookout">
+                <img src="images/SeasideSE/200px-Monkey.jpg" class="" id="Monkey">
+                <img src="images/SeasideSE/200px-Sea_Chart.jpg" class="" id="Sea Chart">
+                <img src="images/SeasideSE/200px-Smugglers.jpg" class="" id="Smugglers">
+                <img src="images/SeasideSE/200px-Warehouse.jpg" class="" id="Warehouse">
+                
+                <img src="images/SeasideSE/200px-Blockade.jpg" class="" id="Blockade">
+                <img src="images/SeasideSE/200px-Caravan.jpg" class="" id="Caravan">
+                <img src="images/SeasideSE/200px-Cutpurse.jpg" class="" id="Cutpurse">
+                <img src="images/SeasideSE/200px-Island.jpg" class="" id="Island">
+                <img src="images/SeasideSE/200px-Sailor.jpg" class="" id="Sailor">
+                <img src="images/SeasideSE/200px-Salvager.jpg" class="" id="Salvager">
+                <img src="images/SeasideSE/200px-Tide_Pools.jpg" class="" id="Tide Pools">
+                <img src="images/SeasideSE/200px-Treasure_Map.jpg" class="" id="Treasure Map">
+                <img src="images/SeasideSE/200px-Bazaar.jpg" class="" id="Bazaar">
+                <img src="images/SeasideSE/200px-Corsair.jpg" class="" id="Corsair">
+                
+                <img src="images/SeasideSE/200px-Merchant_Ship.jpg" class="" id="Merchant Ship">
+                <img src="images/SeasideSE/200px-Outpost.jpg" class="" id="Outpost">
+                <img src="images/SeasideSE/200px-Pirate.jpg" class="" id="Pirate">
+                <img src="images/SeasideSE/200px-Sea_Witch.jpg" class="" id="Sea Witch">
+                <img src="images/SeasideSE/200px-Tactician.jpg" class="" id="Tactician">
+                <img src="images/SeasideSE/200px-Treasury.jpg" class="" id="Treasury">
+                <img src="images/SeasideSE/200px-Wharf.jpg" class="" id="Wharf">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <!-- card categories
+
+        Treasure
+        Action
+        Victory
+        Duration
+        Reaction
+        Attack
+        
+        Village
+        Cantrip
+        Terminal Silver
+        Terminal Draw
+        Noneterminal Draw
+        Trasher
+        Gainer
+        Sifter
+        Defense
+    -->
+
+    <script src="app.js"></script>
+</body>
+</html>

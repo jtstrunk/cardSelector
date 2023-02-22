@@ -1,0 +1,446 @@
+activate command in venv/scripts
+flask --app sqlite.py run
+py -m flask --app sqlite.py run
+
+http://wiki.dominionstrategy.com/index.php/Card_Categories
+http://wiki.dominionstrategy.com/index.php/Village_(card_category)
+http://wiki.dominionstrategy.com/index.php/Cantrip
+http://wiki.dominionstrategy.com/index.php/Peddler_variant
+http://wiki.dominionstrategy.com/index.php/Non-terminal_draw#List_of_non-terminal_draw_cards
+http://wiki.dominionstrategy.com/index.php/Terminal_draw
+http://wiki.dominionstrategy.com/index.php/Terminal_Silver
+http://wiki.dominionstrategy.com/index.php/Trasher
+http://wiki.dominionstrategy.com/index.php/Gainers
+http://wiki.dominionstrategy.com/index.php/Sifter
+http://wiki.dominionstrategy.com/index.php/Alternate_victory_points
+venv\Scripts\activate
+(venv) C:\Users\joshs\Desktop\school\Projects\Card Picker>flask --app sqlite run
+
+c.execute("INSERT INTO cards VALUES ('Artisan', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Bandit', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Bureaucrat', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Cellar', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Chapel', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Council Room', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Festival', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Gardens', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Harbinger', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Laboratory', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Library', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Market', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Merchant', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Militia', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Mine', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Moat', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Moneylender', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Poacher', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Remodel', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Sentry', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Smithy', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Throne Room', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Vassel', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Village', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Witch', 'Dominion SE')")
+c.execute("INSERT INTO cards VALUES ('Workshop', 'Dominion SE')")
+
+# c.execute("""CREATE TABLE cards(
+#             name text PRIMARY KEY,
+#             gameset text
+#             )""")
+
+# c.execute("""CREATE TABLE types(
+#             type text PRIMARY KEY
+#             )""")
+
+# c.execute("""CREATE TABLE cardstype(
+#             name text,
+#             type text,
+#             FOREIGN KEY (name) references cards(name),
+#             FOREIGN KEY (type) references types(type)
+#             )""")
+
+# c.execute("""CREATE TABLE categories(
+#             categories text PRIMARY KEY
+#             )""")
+
+# c.execute("""CREATE TABLE cardscategories(
+#             name text,
+#             category text,
+#             FOREIGN KEY (name) references cards(name),
+#             FOREIGN KEY (category) references categories(category)
+#             )""")
+
+c.execute("INSERT INTO categories VALUES('Village')")
+c.execute("INSERT INTO categories VALUES('Cantrip')")
+c.execute("INSERT INTO categories VALUES('Terminal Drawer')")
+c.execute("INSERT INTO categories VALUES('Terminal Silver')")
+c.execute("INSERT INTO categories VALUES('Trasher')")
+c.execute("INSERT INTO categories VALUES('Gainer')")
+c.execute("INSERT INTO categories VALUES('Sifter')")
+c.execute("INSERT INTO categories VALUES('Defense')")
+c.execute("INSERT INTO categories VALUES('Victory')")
+c.execute("INSERT INTO categories VALUES('Treasure')")
+
+c.execute("INSERT INTO cardscategories VALUES('Cellar', 'Sifter')")
+c.execute("INSERT INTO cardscategories VALUES('Chapel', 'Trasher')")
+c.execute("INSERT INTO cardscategories VALUES('Council Room', 'Terminal Drawer')")
+c.execute("INSERT INTO cardscategories VALUES('Festival', 'Village')")
+c.execute("INSERT INTO cardscategories VALUES('Gardens', 'Victory')")
+c.execute("INSERT INTO cardscategories VALUES('Harbinger', 'Cantrip')")
+c.execute("INSERT INTO cardscategories VALUES('Library', 'Terminal Drawer')")
+c.execute("INSERT INTO cardscategories VALUES('Militia', 'Terminal Silver')")
+c.execute("INSERT INTO cardscategories VALUES('Moat', 'Terminal Drawer')")
+c.execute("INSERT INTO cardscategories VALUES('Moneylender', 'Terminal Silver')")
+c.execute("INSERT INTO cardscategories VALUES('Sentry', 'Cantrip')")
+c.execute("INSERT INTO cardscategories VALUES('Sentry', 'Trasher')")
+c.execute("INSERT INTO cardscategories VALUES('Sentry', 'Sifter')")
+c.execute("INSERT INTO cardscategories VALUES('Vassel', 'Terminal Silver')")
+c.execute("INSERT INTO cardscategories VALUES('Village', 'Village')")
+c.execute("INSERT INTO cardscategories VALUES('Witch', 'Terminal Drawer')")
+c.execute("INSERT INTO cardscategories VALUES('Workshop', 'Gainer')")
+c.execute("INSERT INTO cardscategories VALUES('Poacher', 'Cantrip')")
+c.execute("INSERT INTO cardscategories VALUES('Merchant', 'Cantrip')")
+c.execute("INSERT INTO cardscategories VALUES('Labatory', 'Cantrip')")
+
+c.execute("INSERT INTO types VALUES('Action')")
+c.execute("INSERT INTO types VALUES('Attack')")
+c.execute("INSERT INTO types VALUES('Duration')")
+c.execute("INSERT INTO types VALUES('Reaction')")
+c.execute("INSERT INTO types VALUES('Treasure')")
+c.execute("INSERT INTO types VALUES('Victory')")
+
+c.execute("INSERT INTO cardstype VALUES('Artisan', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Bandit', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Bandit', 'Attack')")
+c.execute("INSERT INTO cardstype VALUES('Bureaucrat', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Cellar', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Chapel', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Council Room', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Festival', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Gardens', 'Victory')")
+c.execute("INSERT INTO cardstype VALUES('Harbinger', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Laboatory', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Library', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Market', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Merchant', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Militia', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Militia', 'Attack')")
+c.execute("INSERT INTO cardstype VALUES('Mine', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Moat', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Moat', 'Reaction')")
+c.execute("INSERT INTO cardstype VALUES('Moneylender', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Poacher', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Remodel', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Sentry', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Smithy', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Throne Room', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Vassel', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Village', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Witch', 'Action')")
+c.execute("INSERT INTO cardstype VALUES('Witch', 'Attack')")
+c.execute("INSERT INTO cardstype VALUES('Workshop', 'Action')")
+
+c.execute("INSERT INTO cards VALUES ('Astrolabe', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Bazaar', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Blockade', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Caravan', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Corsair', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Curpurse', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Fishing Village', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Haven', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Island', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Lighthouse', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Lookout', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Merchant Ship', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Monkey', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Native Vilage', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Outpost', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Pirate', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Sailor', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Salvager', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Sea Chart', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Sea Witch', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Smugglers', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Tactician', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Tide Pools', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Treasure Map', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Treasury', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Warehouse', 'Seaside SE')")
+c.execute("INSERT INTO cards VALUES ('Wharf', 'Seaside SE')")
+
+
+
+
+
+
+
+c.execute("""CREATE TABLE village(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE cantrip(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE terminalSilver(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE terminalDraw(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE nonterminalDraw(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE trasher(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE gainer(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE sifter(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+
+c.execute("""CREATE TABLE action(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE attack(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE victory(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE treasure(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE reaction(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+c.execute("""CREATE TABLE duration(
+            name text,
+            FOREIGN KEY (name) references cards(name)
+            )""")
+
+c.execute("INSERT INTO village VALUES('Village')")
+c.execute("INSERT INTO village VALUES('Festival')")
+c.execute("INSERT INTO village VALUES('Bazaar')")
+c.execute("INSERT INTO village VALUES('Fishing Village')")
+c.execute("INSERT INTO village VALUES('Native Village')")
+c.execute("INSERT INTO village VALUES('Tactician')")
+
+c.execute("INSERT INTO cantrip VALUES('Harbinger')")
+c.execute("INSERT INTO cantrip VALUES('Merchant')")
+c.execute("INSERT INTO cantrip VALUES('Poacher')")
+c.execute("INSERT INTO cantrip VALUES('Sentry')")
+c.execute("INSERT INTO cantrip VALUES('Caravan')")
+c.execute("INSERT INTO cantrip VALUES('Haven')")
+c.execute("INSERT INTO cantrip VALUES('Sea Witch')")
+c.execute("INSERT INTO cantrip VALUES('Treasury')")
+
+c.execute("INSERT INTO terminalSilver VALUES('Militia')")
+c.execute("INSERT INTO terminalSilver VALUES('Moneylender')")
+c.execute("INSERT INTO terminalSilver VALUES('Vassel')")
+c.execute("INSERT INTO terminalSilver VALUES('Corsair')")
+c.execute("INSERT INTO terminalSilver VALUES('Cut Purse')")
+c.execute("INSERT INTO terminalSilver VALUES('Merchant Ship')")
+
+c.execute("INSERT INTO terminalDraw VALUES('Moat')")
+c.execute("INSERT INTO terminalDraw VALUES('Smithy')")
+c.execute("INSERT INTO terminalDraw VALUES('Witch')")
+c.execute("INSERT INTO terminalDraw VALUES('Sea Witch')")
+c.execute("INSERT INTO terminalDraw VALUES('Wharf')")
+
+c.execute("INSERT INTO nonterminalDraw VALUES('Laboratory')")
+c.execute("INSERT INTO nonterminalDraw VALUES('Caravan')")
+c.execute("INSERT INTO nonterminalDraw VALUES('Sea Chart')")
+c.execute("INSERT INTO nonterminalDraw VALUES('Tide Pools')")
+
+c.execute("INSERT INTO trasher VALUES('Moneylender')")
+c.execute("INSERT INTO trasher VALUES('Sentry')")
+c.execute("INSERT INTO trasher VALUES('Island')")
+c.execute("INSERT INTO trasher VALUES('Lookout')")
+c.execute("INSERT INTO trasher VALUES('Native Village')")
+c.execute("INSERT INTO trasher VALUES('Sailor')")
+c.execute("INSERT INTO trasher VALUES('Salvager')")
+
+c.execute("INSERT INTO gainer VALUES('Workshop')")
+c.execute("INSERT INTO gainer VALUES('Blockade')")
+c.execute("INSERT INTO gainer VALUES('Pirate')")
+c.execute("INSERT INTO gainer VALUES('Smugglers')")
+
+c.execute("INSERT INTO sifter VALUES('Cellar')")
+c.execute("INSERT INTO sifter VALUES('Sentry')")
+c.execute("INSERT INTO sifter VALUES('Lookout')")
+c.execute("INSERT INTO sifter VALUES('Sea Witch')")
+c.execute("INSERT INTO sifter VALUES('Warehouse')")
+
+c.execute("INSERT INTO action VALUES('Artisan')")
+c.execute("INSERT INTO action VALUES('Bandit')")
+c.execute("INSERT INTO action VALUES('Bureaucrat')")
+c.execute("INSERT INTO action VALUES('Cellar')")
+c.execute("INSERT INTO action VALUES('Chapel')")
+c.execute("INSERT INTO action VALUES('Council Room')")
+c.execute("INSERT INTO action VALUES('Festival')")
+c.execute("INSERT INTO action VALUES('Harbinger')")
+c.execute("INSERT INTO action VALUES('Laboratory')")
+c.execute("INSERT INTO action VALUES('Library')")
+c.execute("INSERT INTO action VALUES('Market')")
+c.execute("INSERT INTO action VALUES('Merchant')")
+c.execute("INSERT INTO action VALUES('Militia')")
+c.execute("INSERT INTO action VALUES('Mine')")
+c.execute("INSERT INTO action VALUES('Moat')")
+c.execute("INSERT INTO action VALUES('Moneylender')")
+c.execute("INSERT INTO action VALUES('Poacher')")
+c.execute("INSERT INTO action VALUES('Remodel')")
+c.execute("INSERT INTO action VALUES('Sentry')")
+c.execute("INSERT INTO action VALUES('Smithy')")
+c.execute("INSERT INTO action VALUES('Throne Room')")
+c.execute("INSERT INTO action VALUES('Vassal')")
+c.execute("INSERT INTO action VALUES('Village')")
+c.execute("INSERT INTO action VALUES('Witch')")
+c.execute("INSERT INTO action VALUES('Workshop')")
+c.execute("INSERT INTO action VALUES('Bazaar')")
+c.execute("INSERT INTO action VALUES('Blockade')")
+c.execute("INSERT INTO action VALUES('Caravan')")
+c.execute("INSERT INTO action VALUES('Corsair')")
+c.execute("INSERT INTO action VALUES('Cutpurse')")
+c.execute("INSERT INTO action VALUES('Fishing Village')")
+c.execute("INSERT INTO action VALUES('Haven')")
+c.execute("INSERT INTO action VALUES('Island')")
+c.execute("INSERT INTO action VALUES('Lighthouse')")
+c.execute("INSERT INTO action VALUES('Lookout')")
+c.execute("INSERT INTO action VALUES('Merchant Ship')")
+c.execute("INSERT INTO action VALUES('Monkey')")
+c.execute("INSERT INTO action VALUES('Native Village')")
+c.execute("INSERT INTO action VALUES('Outpst')")
+c.execute("INSERT INTO action VALUES('Pirate')")
+c.execute("INSERT INTO action VALUES('Sailor')")
+c.execute("INSERT INTO action VALUES('Salvager')")
+c.execute("INSERT INTO action VALUES('Sea Chart')")
+c.execute("INSERT INTO action VALUES('Sea Witch')")
+c.execute("INSERT INTO action VALUES('Smugglers')")
+c.execute("INSERT INTO action VALUES('Tactician')")
+c.execute("INSERT INTO action VALUES('Tide Pools')")
+c.execute("INSERT INTO action VALUES('Treasure Map')")
+c.execute("INSERT INTO action VALUES('Treasury')")
+c.execute("INSERT INTO action VALUES('Warehouse')")
+c.execute("INSERT INTO action VALUES('Wharf')")
+
+c.execute("INSERT INTO attack VALUES('Bandit')")
+c.execute("INSERT INTO attack VALUES('Bureaucrat')")
+c.execute("INSERT INTO attack VALUES('Militia')")
+c.execute("INSERT INTO attack VALUES('Witch')")
+c.execute("INSERT INTO attack VALUES('Blockade')")
+c.execute("INSERT INTO attack VALUES('Corsair')")
+c.execute("INSERT INTO attack VALUES('Sea Witch')")
+c.execute("INSERT INTO attack VALUES('Bandit')")
+
+c.execute("INSERT INTO victory VALUES('Gardens')")
+c.execute("INSERT INTO victory VALUES('Island')")
+c.execute("INSERT INTO treasure VALUES('Astrolabe')")
+c.execute("INSERT INTO reaction VALUES('Moat')")
+c.execute("INSERT INTO reaction VALUES('Pirate')")
+
+c.execute("INSERT INTO duration VALUES('Blockade')")
+c.execute("INSERT INTO duration VALUES('Caravan')")
+c.execute("INSERT INTO duration VALUES('Corsair')")
+c.execute("INSERT INTO duration VALUES('Fisjing Village')")
+c.execute("INSERT INTO duration VALUES('Haven')")
+c.execute("INSERT INTO duration VALUES('Light House')")
+c.execute("INSERT INTO duration VALUES('Merchant Ship')")
+c.execute("INSERT INTO duration VALUES('Monkey')")
+c.execute("INSERT INTO duration VALUES('Outpost')")
+c.execute("INSERT INTO duration VALUES('Pirate')")
+c.execute("INSERT INTO duration VALUES('Sailor')")
+c.execute("INSERT INTO duration VALUES('Sea Witch')")
+c.execute("INSERT INTO duration VALUES('Tactician')")
+c.execute("INSERT INTO duration VALUES('Tide Pools')")
+c.execute("INSERT INTO duration VALUES('Wharf')")
+
+c.execute("SELECT name from action")
+print(c.fetchall())
+c.execute("SELECT name from attack")
+print(c.fetchall())
+c.execute("SELECT name from victory")
+print(c.fetchall())
+c.execute("SELECT name from treasure")
+print(c.fetchall())
+c.execute("SELECT name from reaction")
+print(c.fetchall())
+c.execute("SELECT name from duration")
+print(c.fetchall())
+
+c.execute("SELECT name from village")
+print(c.fetchall())
+c.execute("SELECT name from cantrip")
+print(c.fetchall())
+c.execute("SELECT name from terminalSilver")
+print(c.fetchall())
+c.execute("SELECT name from terminalDraw")
+print(c.fetchall())
+c.execute("SELECT name from nonterminalDraw")
+print(c.fetchall())
+c.execute("SELECT name from trasher")
+print(c.fetchall())
+c.execute("SELECT name from gainer")
+print(c.fetchall())
+c.execute("SELECT name from sifter")
+print(c.fetchall())
+
+
+
+
+def dbconnection():
+    conn = sqlite3.connect('cards.db')
+    return conn
+
+@app.route('/cards')
+def index():
+    conn = dbconnection()
+    c = conn.cursor()
+
+    c.execute("""SELECT DISTINCT cards.name
+            FROM cards, attack
+            INNER JOIN action on action.name = cards.name
+            WHERE attack.name = cards.name;
+            """)
+    cards = c.fetchall()
+    flatCards = []
+    for card in cards:
+        flatCards.append(card[0])
+    
+    response = jsonify(flatCards)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+
+@app.route('/type')
+def inde():
+    conn = dbconnection()
+    c = conn.cursor()
+
+    cardType = request.args["cardType"]
+
+    c.execute(f"""SELECT DISTINCT cards.name
+            FROM cards, {cardType}
+            WHERE {cardType}.name = cards.name;
+            """)
+    cards = c.fetchall()
+    flatCards = []
+    for card in cards:
+        flatCards.append(card[0])
+    
+    response = jsonify(flatCards)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
